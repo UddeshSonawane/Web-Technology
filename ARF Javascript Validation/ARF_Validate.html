@@ -1,0 +1,85 @@
+<!-- ALUMINI REGISTRATION FROM USING HTML AND INLINE CSS
+     with javascript validations performed
+
+BY UDDESH-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<center><title>ARF javascript validation</title></center>
+<script>
+	function validate()
+	{
+		var nm=document.forms["regi"]["name"].value;
+		if(nm=="")
+		{
+			alert("Please enter Name");
+			return false;
+		}
+		
+		var em=document.forms["regi"]["email"].value;
+		if(em=="")
+		{
+			alert("Please enter Email address");
+			return false;
+		}
+		
+		var con=document.forms["regi"]["contact"].value;
+		if(con=="")
+		{
+			alert("Enter contact details please");
+			return false;
+		}
+		
+		var gen=document.forms["regi"]["gender"].value;
+		if(gen=="")
+		{
+			alert("Please tick appropriate field");
+			return 
+		}
+		
+		var add=document.forms["regi"]["address"].value;
+		if(add=="")
+		{
+			alert("Please enter your address");
+			return false;
+		}
+		return true;
+	}
+	
+</script>
+</head>
+<body style=" background-color: linen">
+<center>
+<h1 style=" background-color: lemonchiffon" >Alumini Registration Form</h1>
+<form onsubmit="return validate()" method="Post" name="regi">
+	<table columns="2" border="1px" cellpadding="2px" cellspacing="2px" style="background-color: lightskyblue" >
+		<tr>
+			<td><center><label>Name</label></center></td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td><center><label>Email</label></center></td>
+			<td><input type="text" name="email"></td>
+		</tr>
+		<tr>
+			<td><center><label>Contact No.</label></center></td>
+			<td><input type="text" name="contact"></td>
+		</tr>
+		<tr>
+			<td><center><label>Gender</label></center></td>
+			<td><input type="radio" name="gender">Male<br><input type="radio" name="gender">Female</td>
+		</tr>
+		<tr>
+			<td><center><label>Address</label></center></td>
+			<td><textarea rows="3" name="address" ></textarea></td>
+		</tr>
+		<tr>
+			<td><center><input type="submit" value="submit" ></center></td>
+			<td><input type="reset" value="reset"></td>
+		</tr>
+	</table>
+</form>
+</center>
+</body>
+</html>
